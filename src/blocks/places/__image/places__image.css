@@ -1,0 +1,9 @@
+.places__image {
+    border-radius: 5% 5% 0 0;
+    width: 282px;
+    height: 282px;
+    min-height: 282px;
+    object-fit: cover;
+    cursor: pointer;
+}
+

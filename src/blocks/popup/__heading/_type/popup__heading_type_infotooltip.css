@@ -1,0 +1,11 @@
+.popup__heading_type_infotooltip {
+    margin: 32px 0 0 0;
+    text-align: center;
+    max-width: 358px;
+}
+
+@media screen and (max-width: 621px) {
+    .popup__heading_type_infotooltip {
+        max-width: 244px;
+    }
+}

@@ -1,0 +1,14 @@
+.popup__field-error_active {
+    color: #FF0000;
+    font-size: 12px;
+    line-height: 1.21;
+    margin: 5px 0 0 0;
+}
+
+@media screen and (max-width: 621px) {
+    .popup__field-error_active {
+        font-size: 10px;
+        min-height: 30px;
+    }
+}
+

@@ -1,0 +1,15 @@
+.popup__heading {
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.21;
+    margin: 0 0 54px 0;
+    max-width: 358px;
+}
+
+@media screen and (max-width: 621px) {
+    .popup__heading {
+        margin: 0 0 75px 0;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,12 @@
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    min-width: 358px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 621px) {
+    .auth-form {
+        min-width: 260px;
+    }
+}

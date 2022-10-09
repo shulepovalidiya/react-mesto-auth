@@ -1,0 +1,15 @@
+.popup_picture-view {
+    grid-template-columns: fit-content(75vw);
+    grid-template-rows: 32px fit-content(75vh);
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+@media screen and (max-width: 621px) {
+    .popup {
+        padding-top: 100px;
+        grid-template-columns: fit-content(282px);
+        grid-template-rows: 20px fit-content(330px);
+        row-gap: 16px;
+    }
+}

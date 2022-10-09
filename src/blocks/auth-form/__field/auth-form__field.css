@@ -1,0 +1,33 @@
+.auth-form__field {
+    border: none;
+    border-bottom: 1px solid rgba(204, 204, 204, 1);
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    line-height: 1.21;
+    padding: 0 0 13px;
+    margin: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.auth-form__field:last-of-type {
+    margin-top: 30px;
+}
+
+.auth-form__field::-webkit-input-placeholder {
+    color: #C4C4C4;
+}
+
+.auth-form__field::-moz-placeholder {
+    color: #C4C4C4;
+}
+
+.auth-form__field::-ms-input-placeholder {
+    color: #C4C4C4;
+}
+
+.auth-form__field::placeholder {
+    color: #C4C4C4;
+}
+

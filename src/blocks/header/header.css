@@ -1,0 +1,26 @@
+.header {
+    min-width: 880px;
+    display: flex;
+    flex-direction: row;
+    /**/
+    justify-content: space-between;
+    row-gap: 24px;
+    margin: 0;
+    padding: 0 0 41px 0;
+    border-bottom: 1px solid #545454;
+    align-items: baseline;
+}
+
+@media screen and (max-width: 944px) {
+    .header {
+        min-width: 581px;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .header {
+        min-width: 100%;
+        padding: 0 0 31.6px 0;
+        align-items: flex-end;
+    }
+}

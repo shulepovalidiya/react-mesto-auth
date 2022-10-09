@@ -1,0 +1,6 @@
+.popup__image-container {
+    margin: 0;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 1;
+}

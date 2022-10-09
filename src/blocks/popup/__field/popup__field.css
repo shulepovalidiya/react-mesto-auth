@@ -1,0 +1,27 @@
+.popup__field {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    line-height: 1.21;
+    padding: 0 0 13px;
+    margin: 0;
+    width: 100%;
+}
+
+.popup__field::-webkit-input-placeholder {
+    color: #C4C4C4;
+}
+
+.popup__field::-moz-placeholder {
+    color: #C4C4C4;
+}
+
+.popup__field::-ms-input-placeholder {
+    color: #C4C4C4;
+}
+
+.popup__field::placeholder {
+    color: #C4C4C4;
+}

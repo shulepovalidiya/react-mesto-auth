@@ -1,0 +1,25 @@
+.places__cards {
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 282px));
+    padding: 47px 0 0 0;
+    margin: 0;
+    justify-content: space-between;
+    font-size: 0;
+    row-gap: 20px;
+    column-gap: 17px;
+}
+
+@media screen and (max-width: 944px) {
+    .places__cards {
+        max-width: 581px;
+    }
+}
+
+@media screen and (max-width: 621px) {
+    .places__cards {
+        max-width: 282px;
+        padding: 36px 0 0 0;
+        gap: 20px;
+    }
+}

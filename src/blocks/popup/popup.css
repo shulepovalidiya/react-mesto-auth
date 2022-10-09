@@ -1,0 +1,26 @@
+.popup {
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    padding-top: 155px;
+    display: grid;
+    grid-template-columns: fit-content(430px);
+    grid-template-rows: 32px fit-content(344px);
+    gap: 8px;
+    justify-content: center;
+    transition: opacity .3s ease-out;
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 621px) {
+    .popup {
+        grid-template-columns: fit-content(282px);
+        grid-template-rows: 20px fit-content(330px);
+        row-gap: 16px;
+    }
+}
