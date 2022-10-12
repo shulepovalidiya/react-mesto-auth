@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from "react";
 import { Route, Switch, useHistory } from 'react-router-dom';
-import '../index.css';
-
 import Api from "../utils/Api";
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 import Header from './Header';
@@ -15,7 +13,7 @@ import {AddPlacePopup} from "./AddPlacePopup";
 import {Register} from "./Register";
 import {Login} from "./Login";
 import ProtectedRoute from "./ProtectedRoute";
-import * as Auth from './Auth';
+import * as Auth from '../utils/Auth';
 
 function App() {
 
@@ -43,7 +41,7 @@ function App() {
     }, [])
 
     useEffect(() => {
-        tokenCheck();
+        checkToken();
     }, [loggedIn])
 
     const handleEditAvatarClick = () => {
@@ -75,7 +73,7 @@ function App() {
     const handleUpdateUser = ({name, about}) => {
         Api.setUserData(name, about)
             .then(res => setCurrentUser(res))
-            .then(closeAllPopups())
+            .then(closeAllPopups)
             .catch(err => console.log(err))
     }
 
@@ -116,29 +114,27 @@ function App() {
         Auth.authorize(userPassword, userEmail)
             .then((res) => {
                 if (res.token) {
+                    localStorage.setItem('token', res.token)
                     setLoggedIn(true);
                     history.push('/');
                     setEmail(userEmail);
-                    console.log(loggedIn)
                 }
             })
+            .catch((err) => console.log(err));
     }
 
 
-    function tokenCheck() {
+
+    function checkToken() {
         const token = localStorage.getItem('token');
-        console.log(token)
         if (token) {
-            setLoggedIn(true);
-            console.log(loggedIn)
-            Auth.getEmail(token)
+            Auth.validateToken(token)
                 .then((data) => {
+                    setLoggedIn(true);
                     setEmail(data.data.email)
                     history.push('/')
                 })
                 .catch((err) => console.log(err))
-        } else {
-            console.log("Ошибка входа")
         }
     }
 
@@ -147,8 +143,6 @@ function App() {
         setLoggedIn(false);
         history.push('/signin');
     }
-
-
 
     return (
         <CurrentUserContext.Provider value={currentUser}>
@@ -167,11 +161,11 @@ function App() {
                                     onCardDelete={handleCardDelete}
                     />
 
-                    <Route path={`/signup`} component={Register}>
-
+                    <Route path={`/signup`}>
+                        <Register />
                     </Route>
 
-                    <Route path={`/signin`} component={Login}>
+                    <Route path={`/signin`}>
                         <Login handleLogin={handleLogin}/>
                     </Route>
 

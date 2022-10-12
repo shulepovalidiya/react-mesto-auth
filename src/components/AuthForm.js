@@ -2,17 +2,9 @@ import React, {useEffect, useState} from "react";
 
 export function AuthForm({header, name, onSubmit, onEmailChange, onPasswordChange, buttonText, password, email}) {
 
-    const [formHeader, setFormHeader] = useState('');
-    const [submitButtonText, setSubmitButtonTextButtonText] = useState('')
-
-    useEffect(() => {
-        setFormHeader(header);
-        setSubmitButtonTextButtonText(buttonText);
-    }, [])
-
     return (
         <form className="auth-form" name={name} onSubmit={onSubmit}>
-            <h2 className="auth-form__header">{formHeader}</h2>
+            <h2 className="auth-form__header">{header}</h2>
             <div className="auth-form__field-container">
                 <input type="email"
                        id="email-field"
@@ -39,7 +31,7 @@ export function AuthForm({header, name, onSubmit, onEmailChange, onPasswordChang
                 <span className="bio-field-error"></span>
             </div>
             <button type="submit" className="auth-form__submit-button">
-                {submitButtonText}
+                {buttonText}
             </button>
         </form>
     )

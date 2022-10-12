@@ -31,16 +31,10 @@ export const authorize = (password, email) => {
         .then((res) => {
             return res.json();
         })
-        .then((res) => {
-            if (res.token) {
-                localStorage.setItem('token', res.token)
-                return res;
-            }
-        })
-        .catch((err) => console.log(err))
+
 }
 
-export const getEmail = (token) => {
+export const validateToken = (token) => {
     return fetch(`${BASE_URL}users/me`, {
         method: 'GET',
         headers: {

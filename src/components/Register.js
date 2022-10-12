@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AuthForm } from "./AuthForm";
 import { Link, useHistory } from "react-router-dom";
-import * as auth from "./Auth";
+import * as auth from "../utils/Auth";
 import { InfoTooltip } from "./InfoTooltip";
 
 export function Register(props) {
@@ -13,11 +13,6 @@ export function Register(props) {
 
     const [isSuccessful, setIsSuccessful] = useState(false);
     const [isInfoTooltipOpen, setIsInfoTooltipOpen] = useState(false);
-
-    useEffect(() => {
-        setPassword('');
-        setEmail('');
-    }, []);
 
     const onClose = () => {
         setIsInfoTooltipOpen(false);
@@ -44,7 +39,6 @@ export function Register(props) {
                         setIsInfoTooltipOpen(true);
                         setEmail('');
                         setPassword('');
-                        setTimeout((() => history.push('/signin')), 3000)
                     } else {
                         setIsSuccessful(false);
                         setIsInfoTooltipOpen(true);

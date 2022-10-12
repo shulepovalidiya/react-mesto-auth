@@ -29,7 +29,7 @@ function Card( { onCardClick, card, onCardLike, onCardDislike } ) {
                 alt={card.name}
                 className="places__image"
                 src={card.link}
-                onClick={() => handleClick()}/>
+                onClick={handleClick}/>
             <div className="places__caption">
                 <h2 className="places__name">{card.name}</h2>
                 <div className="places__like-section">
