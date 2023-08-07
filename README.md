@@ -1,6 +1,6 @@
 # Проект Mesto на Реакте с авторизацией и регистрацией
 
-![image](https://github.com/shulepovalidiya/react-mesto-auth/assets/77075458/955c87a3-11d2-4883-aede-17beac4b33f1)
+![image](https://github.com/shulepovalidiya/react-mesto-auth/assets/77075458/9969b9da-3021-4d96-9e31-7070f8cae40c)
 
 Проект выполнен в рамках курса по Web-разработке от Яндекс Практикум. Свёрстан [по макету](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1). Основные цели проекта — добиться максимальной схожести страницы с макетом, реализовать плавное сжатие страницы, чтобы она вела себя однородно — без явных отклонений от заданного в макете поведения, а также релизовать всю необходимую функциональность с помощью JavaScript и React.
 
